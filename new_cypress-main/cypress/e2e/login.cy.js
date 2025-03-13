@@ -4,7 +4,7 @@ describe('Проверка авторизации', function () {
          cy.visit('https://login.qa.studio/'); // зашли на сайт 
          cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // проверяю цвет кнопки воссстановить пароль 
          cy.get('#mail').type('USER_LOGIN'); // ввели верный логин
-         cy.get('#pass').type('iLoveqastudio1'); // ввели верный пароль
+         cy.get('#pass').type('USER_PASSWORD'); // ввели верный пароль
          cy.get('#loginButton').click(); // нажал войти 
          cy.get('#messageHeader').contains('Авторизация прошла успешно'); // проверяю, что после авт вижу текст
          cy.get('#messageHeader').should('be.visible'); // текст виден пользователю
